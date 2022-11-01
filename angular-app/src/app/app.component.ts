@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subject, takeUntil } from 'rxjs';
+import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
 import { AppService } from './app.service';
 
 
@@ -16,6 +16,15 @@ export class AppComponent implements OnInit {
     console.log(index++);
   }
 
+  sharedState = 'Hello from parent';
+  sharedState$ = new BehaviorSubject(this.sharedState);
+
+
   title = 'angular-app';
+
+  public updateSharedState(e: any) {
+    this.sharedState = e.target.value;
+    this.sharedState$.next(this.sharedState);
+  }
 
 }

@@ -1,0 +1,16 @@
+<h2>Dependency</h2>
+  <ng-content></ng-content>
+<div>
+  <h3>From parent</h3>
+  <h4>Retrieve with @Input() </h4>
+  <p>Without observable : {{parentState}}</p>
+  <p>With observable : {{parentState$ | async}}</p>
+  <h4>Computed in child :</h4>
+  <p>From @Input() : {{currentState}}</p>
+  <p>From Observable$ :  {{currentStateObs}}</p>
+</div>
+<div>
+  <h3>From siblings</h3>
+  <p>Store state : </p>
+  <p>Current state : </p>
+</div>
