@@ -1,0 +1,7 @@
+<div>
+  <h3>Api calls</h3>
+  <p>My data : {{isLoading ? 'Loading ...' : error ?? data}}
+  </p>
+  <button (click)="fetchData()">Refetch data</button>
+  <button (click)="fetchData(true)">Fetch with errors</button>
+</div>

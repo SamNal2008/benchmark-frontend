@@ -1,26 +1,5 @@
 <div class="App">
   <h1>Hello from Angular 👋 !</h1>
-  <div>
-    <h3>Reactivity</h3>
-    <p>Value of count: {{count}}</p>
-    <button (click)="increaseCount()">Click to increase count</button>
-  </div>
-  <div>
-    <h3>Api calls</h3>
-    <p>My data :
-      <ng-container [ngSwitch]="currentFetchingState">
-        <ng-container *ngSwitchCase="FetchingState.LOADING">
-          Loading ...
-        </ng-container>
-        <ng-container *ngSwitchCase="FetchingState.ERROR">
-          {{error}}
-        </ng-container>
-        <ng-container *ngSwitchCase="FetchingState.SUCCESS">
-          {{data}}
-        </ng-container>
-      </ng-container>
-    </p>
-    <button (click)="fetchData()">Refetch data</button>
-    <button (click)="fetchData(true)">Fetch with errors</button>
-  </div>
+  <app-reactivity></app-reactivity>
+  <app-api-calls></app-api-calls>
 </div>

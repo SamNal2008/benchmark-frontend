@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactivityComponent } from './reactivity/reactivity.component';
+import { ApiCallsComponent } from './api-calls/api-calls.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReactivityComponent,
+    ApiCallsComponent
   ],
   imports: [
     BrowserModule,
